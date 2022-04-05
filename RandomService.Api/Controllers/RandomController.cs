@@ -17,5 +17,8 @@ namespace RandomService.Api.Controllers
 
         [HttpGet("number")]
         public int Get(int min = 0, int max = 100) => _randomProvider.Get(min, max);
+
+        [HttpGet("DateTime")]
+        public DateTime Get() => _randomProvider.Get();
     }
 }
