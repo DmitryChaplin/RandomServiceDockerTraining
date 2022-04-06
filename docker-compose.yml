@@ -1,0 +1,14 @@
+version: "1.0"
+services:
+    sales:
+        build: ./Sales
+        image: chapdchap/randomservice-sales-api:dev
+        ports:
+            - "8080:80"
+        depends_on:
+            - inventorystore
+    inventorystore:
+        build: ./InventoryStore
+        image: chapdchap/randomservice-inventorystore-api:dev
+        ports:
+            - "8081:80"
